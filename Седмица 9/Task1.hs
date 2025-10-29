@@ -1,0 +1,20 @@
+main::IO()
+main = do
+    print $ isPresent 0 [0, -1, 2] == True
+    print $ isPresent 1 [0, 1, 2] == True
+    print $ isPresent 2 [0, 1, -2] == False
+    print $ isPresent 3 [0, 1, 2] == False
+    print $ isPresent 2 [1, 4, 5, 6] ==False
+    --my test
+
+isPresent :: (Eq a) => a -> [a] -> Bool
+isPresent _ [] = False
+isPresent x (y:ys) = x==y || isPresent x ys
+ 
+
+
+
+
+
+
+
